@@ -238,19 +238,6 @@
             gap: 30px;
         }
 
-        .project-card-link {
-            text-decoration: none; 
-            color: inherit; 
-            display: block; 
-            transition: all 0.4s ease;
-        }
-
-        .project-card-link:hover .project-card {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
-            border-color: rgba(255,255,255,0.2);
-        }
-
         .project-card {
             background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
             border-radius: 20px;
@@ -258,7 +245,17 @@
             border: 1px solid rgba(255,255,255,0.1);
             position: relative;
             overflow: hidden;
-            height: 100%;
+            height: 100%; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+            border-color: rgba(255,255,255,0.2);
         }
 
         .project-card h3 {
@@ -272,6 +269,29 @@
             color: #cbd5e1;
             font-size: 1rem;
             line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s ease;
+            align-self: flex-start; /* Alinha o botão à esquerda */
+        }
+
+        .project-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .project-link i {
+            font-size: 1.2rem;
         }
         
         footer {
@@ -340,19 +360,27 @@
             <h2>Projetos</h2>
             <div class="projects-grid">
                 
-                <a href="https://github.com/TiagoRGuedes/gerenciador-de-tarefas-em-c" target="_blank" class="project-card-link">
-                    <div class="project-card">
+                <div class="project-card">
+                    <div>
                         <h3>Sistema de Gerenciamento de Tarefas (C)</h3>
                         <p>Aplicação de linha de comando desenvolvida em C para o gerenciamento de tarefas. O projeto teve como foco a aplicação de conceitos de ponteiros, structs e manipulação de arquivos.</p>
                     </div>
-                </a>
+                    <a href="https://github.com/TiagoRGuedes/gerenciador-de-tarefas-em-c" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i>
+                        <span>Ver no GitHub</span>
+                    </a>
+                </div>
 
-                <a href="https://github.com/TiagoRGuedes/calculadora-de-conversao-em-c" target="_blank" class="project-card-link">
-                    <div class="project-card">
+                <div class="project-card">
+                    <div>
                         <h3>Calculadora de Conversão (C)</h3>
                         <p>Desenvolvimento de um conversor de unidades (temperatura e moeda) para exercitar e aprimorar os conceitos de lógica de programação e modularização em C.</p>
                     </div>
-                </a>
+                    <a href="https://github.com/TiagoRGuedes/calculadora-de-conversao-em-c" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i>
+                        <span>Ver no GitHub</span>
+                    </a>
+                </div>
 
             </div>
         </section>
