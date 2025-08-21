@@ -238,20 +238,27 @@
             gap: 30px;
         }
 
+        .project-card-link {
+            text-decoration: none; 
+            color: inherit; 
+            display: block; 
+            transition: all 0.4s ease;
+        }
+
+        .project-card-link:hover .project-card {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+            border-color: rgba(255,255,255,0.2);
+        }
+
         .project-card {
             background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
             border-radius: 20px;
             padding: 30px;
             border: 1px solid rgba(255,255,255,0.1);
-            transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
-            border-color: rgba(255,255,255,0.2);
+            height: 100%;
         }
 
         .project-card h3 {
@@ -332,14 +339,21 @@
         <section id="projetos">
             <h2>Projetos</h2>
             <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Sistema de Gerenciamento de Tarefas (C)</h3>
-                    <p>Aplicação de linha de comando desenvolvida em C para o gerenciamento de tarefas. O projeto teve como foco a aplicação de conceitos de ponteiros, structs e manipulação de arquivos.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Calculadora de Conversão (C)</h3>
-                    <p>Desenvolvimento de um conversor de unidades (temperatura e moeda) para exercitar e aprimorar os conceitos de lógica de programação e modularização em C.</p>
-                </div>
+                
+                <a href="https://github.com/TiagoRGuedes/gerenciador-de-tarefas-em-c" target="_blank" class="project-card-link">
+                    <div class="project-card">
+                        <h3>Sistema de Gerenciamento de Tarefas (C)</h3>
+                        <p>Aplicação de linha de comando desenvolvida em C para o gerenciamento de tarefas. O projeto teve como foco a aplicação de conceitos de ponteiros, structs e manipulação de arquivos.</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/TiagoRGuedes/calculadora-de-conversao-em-c" target="_blank" class="project-card-link">
+                    <div class="project-card">
+                        <h3>Calculadora de Conversão (C)</h3>
+                        <p>Desenvolvimento de um conversor de unidades (temperatura e moeda) para exercitar e aprimorar os conceitos de lógica de programação e modularização em C.</p>
+                    </div>
+                </a>
+
             </div>
         </section>
         
