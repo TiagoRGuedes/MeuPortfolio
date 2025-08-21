@@ -283,7 +283,7 @@
             text-decoration: none;
             font-weight: 500;
             transition: background 0.3s ease;
-            align-self: flex-start; /* Alinha o botão à esquerda */
+            align-self: flex-start; 
         }
 
         .project-link:hover {
@@ -328,10 +328,12 @@
                 left: -220px;
                 top: 0;
                 transition: left 0.3s ease;
+                pointer-events: none; 
             }
 
             .sidebar.active {
                 left: 0;
+                pointer-events: auto; 
             }
 
             .sidebar-logo {
@@ -394,7 +396,8 @@
       const sidebar = document.querySelector('.sidebar');
       const logo = document.querySelector('.sidebar-logo');
       logo.addEventListener('click', () => {
-        sidebar.classList.toggle('active');
+        const isActive = sidebar.classList.toggle('active');
+        sidebar.style.pointerEvents = isActive ? 'auto' : 'none';
       });
     </script>
 </body>
